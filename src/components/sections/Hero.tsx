@@ -23,10 +23,10 @@ export default function Hero() {
           transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
           className="flex flex-col items-center"
         >
-          <div className="inline-flex items-center gap-2.5 py-1.5 px-4 rounded-full bg-[#143109]/5 border border-[#143109]/10 text-[#143109] text-[12px] font-bold tracking-widest uppercase mb-10 backdrop-blur-md">
+          {/* <div className="inline-flex items-center gap-2.5 py-1.5 px-4 rounded-full bg-[#143109]/5 border border-[#143109]/10 text-[#143109] text-[12px] font-bold tracking-widest uppercase mb-10 backdrop-blur-md">
             <span className="w-1.5 h-1.5 rounded-full bg-[#143109] animate-pulse" />
             Leading Digital Agency
-          </div>
+          </div> */}
           
           <h1 className="text-4xl md:text-[92px] font-bold tracking-tight leading-[0.95] mb-10 text-[#121212] max-w-4xl mx-auto font-display">
             Precision code.<br />
