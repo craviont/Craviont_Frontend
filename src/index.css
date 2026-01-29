@@ -1,0 +1,161 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+
+@theme inline {
+  --font-sans: 'Inter', sans-serif;
+  --font-display: 'Poppins', sans-serif;
+
+  --radius-sm: 0.75rem;
+  --radius-md: 1rem;
+  --radius-lg: 1.25rem;
+  --radius-xl: 1.5rem;
+
+  /* Custom Colors based on Craviont Palette */
+  --color-background: hsl(0 0% 88%); /* #E0E0E0 */
+  --color-foreground: hsl(0 0% 13%); /* #212121 */
+
+  --color-card: hsl(0 0% 100%); /* #FFFFFF */
+  --color-card-foreground: hsl(0 0% 13%); /* #212121 */
+
+  --color-popover: hsl(0 0% 100%);
+  --color-popover-foreground: hsl(0 0% 13%);
+
+  --color-primary: hsl(103 69% 11%); /* #143109 */
+  --color-primary-foreground: hsl(0 0% 100%);
+
+  --color-secondary: hsl(0 0% 100%);
+  --color-secondary-foreground: hsl(103 69% 11%);
+
+  --color-muted: hsl(0 0% 96%);
+  --color-muted-foreground: hsl(0 0% 40%);
+
+  --color-accent: hsl(103 69% 95%); /* Very light olive for hovers */
+  --color-accent-foreground: hsl(103 69% 11%);
+
+  --color-destructive: hsl(0 84% 60%);
+  --color-destructive-foreground: hsl(0 0% 98%);
+
+  --color-border: hsl(0 0% 90%);
+  --color-input: hsl(0 0% 90%);
+  --color-ring: hsl(103 69% 11%);
+
+  --color-chart-1: hsl(103 69% 11%);
+  --color-chart-2: hsl(103 40% 30%);
+  --color-chart-3: hsl(103 30% 50%);
+  --color-chart-4: hsl(103 20% 70%);
+  --color-chart-5: hsl(103 10% 80%);
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #c1c1c1;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #a1a1a1;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply font-sans antialiased bg-background text-foreground;
+    background-color: #E0E0E0; /* Fallback/Force */
+  }
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-display tracking-tight text-foreground;
+  }
+}
+
+@layer utilities {
+  .glass-card {
+    @apply bg-white/80 backdrop-blur-md border border-white/20 shadow-lg;
+  }
+  .text-gradient {
+    @apply bg-clip-text text-transparent bg-linear-to-r from-primary to-primary/80;
+  }
+  
+  /* Improved Dotted Grid Pattern */
+  .bg-dotted-grid {
+    background-color: transparent;
+    background-image: radial-gradient(#143109 1.5px, transparent 1.5px);
+    background-size: 30px 30px;
+  }
+  
+  .animate-grid-pulse {
+    animation: gridPulse 4s ease-in-out infinite;
+  }
+
+  .service-modal-open nav {
+    display: none !important;
+  }
+}
+
+@keyframes gridPulse {
+  0%, 100% { opacity: 0.15; }
+  50% { opacity: 0.25; }
+}
+
+/* Global Selection Styles */
+::selection {
+  background-color: #143109;
+  color: #ffffff;
+}
+
+/* Ensure darker backgrounds have visible selection */
+.bg-\[\#143109\] ::selection {
+  background-color: #ffffff;
+  color: #143109;
+}
+
+@keyframes twinkle {
+  0%, 100% { opacity: 0.15; }
+  50% { opacity: 0.4; }
+}
+
+/* Custom Phone Input Styles */
+.react-tel-input .flag-dropdown {
+  background: transparent !important;
+  border: none !important;
+}
+
+.react-tel-input .selected-flag {
+  background: transparent !important;
+  padding-left: 12px !important;
+}
+
+.react-tel-input .selected-flag:hover,
+.react-tel-input .selected-flag:focus {
+  background: rgba(0,0,0,0.05) !important;
+  border-radius: 8px 0 0 8px;
+}
+
+.react-tel-input .country-list {
+  border-radius: 12px !important;
+  box-shadow: 0 10px 30px -5px rgba(0,0,0,0.1) !important;
+  border: 1px solid #eee !important;
+  margin-top: 10px !important;
+  overflow-x: hidden !important;
+}
+
+.react-tel-input .country-list .country.highlight {
+  background-color: #f3f4f6 !important;
+}
+
+.react-tel-input .country-list .country:hover {
+  background-color: #f3f4f6 !important;
+}
