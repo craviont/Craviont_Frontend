@@ -34,7 +34,7 @@ export default function Hero() {
           </h1>
 
           <p className="text-lg md:text-xl text-[#212121]/60 max-w-2xl mx-auto mb-12 leading-relaxed font-medium">
-            We design and build software that’s clear, dependable, and built to grow with your business.
+            We design and build secure, scalable web and mobile applications for startups and growing businesses.
           </p>
 
           <div className="flex flex-col sm:flex-row items-center justify-center gap-5">
