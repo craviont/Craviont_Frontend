@@ -52,7 +52,7 @@ export default function Hero() {
                 size="lg"
                 className="h-15 px-10 text-base border-[#143109]/20 text-[#143109] hover:bg-[#143109]/5 rounded-full transition-all duration-500 cursor-pointer"
               >
-                Start a Project
+                Get a Free Consultation
               </Button>
             </Link>
           </div>
