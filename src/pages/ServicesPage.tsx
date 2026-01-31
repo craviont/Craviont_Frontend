@@ -18,7 +18,7 @@ export default function ServicesPage() {
         <link rel="canonical" href="https://craviont.com/services" />
       </Helmet>
 
-      <h1>Web Application Development Services</h1>
+      <h1 className="sr-only">Web Application Development Services</h1>
       <main className="min-h-screen w-full bg-[#E0E0E0] text-[#212121] font-sans selection:bg-[#143109]/20 selection:text-[#143109] overflow-x-hidden">
         <Navbar />
         <div className="pt-12 bg-white">
